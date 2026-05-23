@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>이호연 | 전기공학과 개인 홈페이지</title>
+  <title>이호연 | Electrical Engineering Portfolio</title>
   <style>
     * {
       margin: 0;
@@ -17,12 +17,13 @@
 
     body {
       font-family: Arial, "Noto Sans KR", sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(37, 99, 235, 0.18), transparent 28%),
-        radial-gradient(circle at top right, rgba(45, 212, 191, 0.12), transparent 24%),
-        linear-gradient(180deg, #06121f 0%, #081826 45%, #0b1324 100%);
-      color: #e5eefb;
+      color: #e8eef9;
       line-height: 1.7;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(37, 99, 235, 0.20), transparent 24%),
+        radial-gradient(circle at 90% 12%, rgba(20, 184, 166, 0.16), transparent 20%),
+        radial-gradient(circle at 50% 100%, rgba(59, 130, 246, 0.10), transparent 30%),
+        linear-gradient(180deg, #07111d 0%, #091524 45%, #0b1220 100%);
     }
 
     a {
@@ -32,17 +33,17 @@
 
     .container {
       width: 90%;
-      max-width: 1120px;
+      max-width: 1160px;
       margin: 0 auto;
     }
 
     header {
       position: sticky;
       top: 0;
-      z-index: 999;
-      background: rgba(5, 15, 28, 0.82);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+      z-index: 1000;
+      background: rgba(6, 12, 23, 0.78);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.10);
     }
 
     nav {
@@ -53,17 +54,17 @@
     }
 
     .logo {
-      font-size: 22px;
+      font-size: 21px;
       font-weight: 800;
-      color: #7dd3fc;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.4px;
+      color: #8be9ff;
     }
 
     .menu {
       display: flex;
       gap: 22px;
+      color: #c8d4e7;
       font-size: 15px;
-      color: #cbd5e1;
     }
 
     .menu a:hover {
@@ -71,286 +72,261 @@
     }
 
     .hero {
-      padding: 90px 0 70px;
+      padding: 92px 0 72px;
     }
 
     .hero-wrap {
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
+      grid-template-columns: 1.25fr 0.75fr;
       gap: 30px;
       align-items: center;
     }
 
-    .badge {
+    .eyebrow {
       display: inline-block;
       padding: 8px 14px;
       border-radius: 999px;
-      background: rgba(59, 130, 246, 0.14);
-      border: 1px solid rgba(96, 165, 250, 0.28);
-      color: #93c5fd;
-      font-size: 14px;
+      background: rgba(59, 130, 246, 0.12);
+      border: 1px solid rgba(96, 165, 250, 0.20);
+      color: #9cc9ff;
+      font-size: 13px;
       font-weight: 700;
       margin-bottom: 18px;
     }
 
     .hero h1 {
-      font-size: 54px;
-      line-height: 1.13;
+      font-size: 56px;
+      line-height: 1.12;
       margin-bottom: 18px;
+      letter-spacing: -0.02em;
       color: #f8fbff;
     }
 
-    .hero h1 .accent {
+    .hero .accent {
       color: #67e8f9;
-      text-shadow: 0 0 16px rgba(103, 232, 249, 0.25);
+      text-shadow: 0 0 18px rgba(103, 232, 249, 0.20);
     }
 
     .hero p {
-      color: #c7d4e6;
+      max-width: 720px;
+      color: #c5d3e6;
       font-size: 18px;
       margin-bottom: 28px;
-      max-width: 720px;
     }
 
     .button-group {
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
-      margin-bottom: 26px;
+      margin-bottom: 24px;
     }
 
     .btn {
-      padding: 12px 18px;
+      display: inline-block;
+      padding: 13px 19px;
       border-radius: 12px;
       font-weight: 700;
-      display: inline-block;
       transition: 0.2s ease;
     }
 
     .btn-primary {
       background: linear-gradient(135deg, #2563eb, #06b6d4);
-      color: white;
-      box-shadow: 0 10px 24px rgba(37, 99, 235, 0.28);
+      color: #fff;
+      box-shadow: 0 14px 28px rgba(37, 99, 235, 0.26);
     }
 
     .btn-secondary {
-      border: 1px solid rgba(148, 163, 184, 0.28);
-      color: #dbeafe;
-      background: rgba(15, 23, 42, 0.5);
+      background: rgba(15, 23, 42, 0.55);
+      border: 1px solid rgba(148, 163, 184, 0.18);
+      color: #dce8f8;
     }
 
     .btn:hover {
       transform: translateY(-2px);
     }
 
-    .keyword-row {
+    .tag-row {
       display: flex;
-      gap: 10px;
       flex-wrap: wrap;
+      gap: 10px;
     }
 
-    .keyword {
+    .tag {
       padding: 8px 12px;
       border-radius: 999px;
-      font-size: 13px;
-      color: #a5f3fc;
       background: rgba(34, 211, 238, 0.08);
-      border: 1px solid rgba(103, 232, 249, 0.18);
+      border: 1px solid rgba(103, 232, 249, 0.14);
+      color: #a5f3fc;
+      font-size: 13px;
     }
 
-    .hero-card {
-      position: relative;
-      background: linear-gradient(180deg, rgba(15, 23, 42, 0.95), rgba(8, 15, 30, 0.94));
-      border: 1px solid rgba(96, 165, 250, 0.18);
-      border-radius: 28px;
+    .hero-panel,
+    .card,
+    .contact-box,
+    .highlight-box,
+    .intro-box {
+      background: rgba(10, 18, 32, 0.82);
+      border: 1px solid rgba(148, 163, 184, 0.12);
+      border-radius: 26px;
+      box-shadow: 0 18px 38px rgba(0, 0, 0, 0.18);
+    }
+
+    .hero-panel {
       padding: 28px;
+      position: relative;
       overflow: hidden;
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.3);
     }
 
-    .hero-card::before {
+    .hero-panel::before {
       content: "";
       position: absolute;
       inset: 0;
       background-image:
-        linear-gradient(rgba(125, 211, 252, 0.06) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(125, 211, 252, 0.06) 1px, transparent 1px);
-      background-size: 24px 24px;
+        linear-gradient(rgba(103, 232, 249, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(103, 232, 249, 0.05) 1px, transparent 1px);
+      background-size: 26px 26px;
       pointer-events: none;
     }
 
-    .circuit {
+    .mini-circuit {
       position: relative;
-      height: 260px;
+      height: 240px;
       margin-bottom: 20px;
     }
 
-    .node {
+    .dot {
       position: absolute;
       width: 14px;
       height: 14px;
       border-radius: 50%;
       background: #67e8f9;
-      box-shadow: 0 0 18px rgba(103, 232, 249, 0.9);
+      box-shadow: 0 0 18px rgba(103, 232, 249, 0.8);
     }
 
-    .node.n1 { top: 24px; left: 26px; }
-    .node.n2 { top: 70px; left: 180px; }
-    .node.n3 { top: 150px; left: 90px; }
-    .node.n4 { top: 48px; right: 48px; }
-    .node.n5 { bottom: 36px; right: 80px; }
+    .d1 { top: 24px; left: 20px; }
+    .d2 { top: 56px; left: 180px; }
+    .d3 { top: 148px; left: 88px; }
+    .d4 { top: 40px; right: 36px; }
+    .d5 { bottom: 34px; right: 72px; }
 
-    .line {
+    .wire {
       position: absolute;
       height: 2px;
       background: linear-gradient(90deg, transparent, #38bdf8, #5eead4, transparent);
-      opacity: 0.9;
       border-radius: 999px;
+      opacity: 0.95;
     }
 
-    .l1 { top: 30px; left: 40px; width: 150px; transform: rotate(15deg); }
-    .l2 { top: 92px; left: 110px; width: 220px; transform: rotate(-10deg); }
-    .l3 { top: 150px; left: 95px; width: 250px; transform: rotate(8deg); }
-    .l4 { top: 100px; left: 40px; width: 80px; transform: rotate(65deg); }
+    .w1 { top: 30px; left: 32px; width: 158px; transform: rotate(10deg); }
+    .w2 { top: 82px; left: 112px; width: 220px; transform: rotate(-9deg); }
+    .w3 { top: 154px; left: 92px; width: 250px; transform: rotate(7deg); }
+    .w4 { top: 100px; left: 44px; width: 78px; transform: rotate(63deg); }
 
     .pulse {
       position: absolute;
       width: 10px;
       height: 10px;
-      background: #fde68a;
       border-radius: 50%;
-      box-shadow: 0 0 16px rgba(253, 224, 71, 0.8);
-      animation: pulseMove 3.2s linear infinite;
+      background: #fde68a;
+      box-shadow: 0 0 16px rgba(253, 224, 71, 0.9);
+      animation: movePulse 3.5s linear infinite;
+      top: 25px;
+      left: 30px;
     }
 
-    .pulse.p1 {
-      top: 26px;
-      left: 38px;
+    @keyframes movePulse {
+      0% { transform: translate(0, 0); opacity: 0.2; }
+      25% { transform: translate(150px, 28px); opacity: 1; }
+      50% { transform: translate(260px, 5px); opacity: 1; }
+      75% { transform: translate(300px, 102px); opacity: 1; }
+      100% { transform: translate(0, 0); opacity: 0.2; }
     }
 
-    @keyframes pulseMove {
-      0% {
-        transform: translate(0, 0);
-        opacity: 0.2;
-      }
-      20% {
-        transform: translate(140px, 30px);
-        opacity: 1;
-      }
-      45% {
-        transform: translate(250px, 10px);
-        opacity: 1;
-      }
-      70% {
-        transform: translate(300px, 95px);
-        opacity: 1;
-      }
-      100% {
-        transform: translate(0, 0);
-        opacity: 0.2;
-      }
-    }
-
-    .system-box {
+    .panel-caption {
       position: relative;
       z-index: 1;
+      background: rgba(2, 6, 23, 0.72);
+      border: 1px solid rgba(96, 165, 250, 0.14);
       border-radius: 18px;
-      background: rgba(2, 6, 23, 0.7);
-      border: 1px solid rgba(125, 211, 252, 0.14);
       padding: 18px;
     }
 
-    .system-box h3 {
-      color: #93c5fd;
-      margin-bottom: 10px;
+    .panel-caption h3 {
       font-size: 18px;
+      color: #9edcff;
+      margin-bottom: 8px;
     }
 
-    .system-box p {
-      color: #cbd5e1;
+    .panel-caption p {
+      color: #c8d4e7;
       font-size: 14px;
     }
 
     section {
-      padding: 72px 0;
+      padding: 74px 0;
     }
 
     .section-title {
       font-size: 34px;
       margin-bottom: 12px;
+      letter-spacing: -0.02em;
       color: #f8fbff;
     }
 
     .section-desc {
-      color: #9fb2c9;
+      color: #9db0c8;
       margin-bottom: 28px;
       font-size: 16px;
     }
 
-    .card,
-    .intro-card,
-    .contact-card,
-    .reflection-box {
-      background: rgba(15, 23, 42, 0.82);
-      border: 1px solid rgba(148, 163, 184, 0.16);
-      border-radius: 24px;
-      padding: 28px;
-      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.16);
-    }
-
-    .intro-card {
+    .intro-box {
+      padding: 30px;
       border-left: 4px solid #38bdf8;
     }
 
-    .grid-2 {
+    .intro-box p {
+      color: #c8d4e7;
+      font-size: 16px;
+    }
+
+    .profile-grid,
+    .grid-2,
+    .grid-3 {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
       gap: 22px;
+    }
+
+    .profile-grid {
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 22px;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, 1fr);
     }
 
     .grid-3 {
-      display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
     }
 
-    .card h3 {
-      font-size: 22px;
-      margin-bottom: 12px;
-      color: #e0f2fe;
-    }
-
-    .card p,
-    .card li,
-    .intro-card p,
-    .contact-card p,
-    .reflection-box p {
-      color: #c7d4e6;
-      font-size: 15px;
-    }
-
-    .profile-list {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px 24px;
-      margin-top: 18px;
-    }
-
-    .profile-item {
-      padding: 12px 14px;
-      border-radius: 16px;
-      background: rgba(2, 6, 23, 0.45);
-      border: 1px solid rgba(96, 165, 250, 0.12);
-      color: #dbeafe;
-      font-size: 15px;
+    .profile-item,
+    .small-box {
+      background: rgba(2, 6, 23, 0.42);
+      border: 1px solid rgba(96, 165, 250, 0.10);
+      border-radius: 18px;
+      padding: 16px;
     }
 
     .profile-item strong {
-      color: #67e8f9;
       display: block;
-      margin-bottom: 4px;
+      color: #67e8f9;
       font-size: 13px;
-      letter-spacing: 0.3px;
+      margin-bottom: 5px;
+    }
+
+    .profile-item span {
+      color: #dce8f8;
+      font-size: 15px;
     }
 
     .chip-row {
@@ -363,74 +339,98 @@
     .chip {
       padding: 8px 12px;
       border-radius: 999px;
-      background: rgba(59, 130, 246, 0.12);
-      border: 1px solid rgba(96, 165, 250, 0.18);
-      color: #bfdbfe;
       font-size: 13px;
+      color: #bfdbfe;
+      background: rgba(59, 130, 246, 0.10);
+      border: 1px solid rgba(96, 165, 250, 0.16);
     }
 
-    .feature-card {
-      background: linear-gradient(180deg, rgba(12, 20, 36, 0.95), rgba(8, 14, 28, 0.95));
-      border: 1px solid rgba(34, 211, 238, 0.12);
-      border-radius: 22px;
-      padding: 24px;
-      position: relative;
-      overflow: hidden;
+    .card {
+      padding: 26px;
     }
 
-    .feature-card::after {
-      content: "";
-      position: absolute;
-      right: -20px;
-      top: -20px;
-      width: 90px;
-      height: 90px;
-      background: radial-gradient(circle, rgba(34, 211, 238, 0.16), transparent 70%);
-      pointer-events: none;
+    .card h3 {
+      font-size: 22px;
+      color: #e8f5ff;
+      margin-bottom: 12px;
     }
 
-    .feature-card h4 {
-      color: #67e8f9;
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-
-    .feature-card p {
-      color: #c7d4e6;
+    .card p {
+      color: #c8d4e7;
       font-size: 15px;
     }
 
-    .feature-card .mini-tag {
+    .feature {
+      position: relative;
+      overflow: hidden;
+      padding: 24px;
+      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(11, 20, 36, 0.95), rgba(7, 14, 28, 0.95));
+      border: 1px solid rgba(34, 211, 238, 0.12);
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.14);
+    }
+
+    .feature::after {
+      content: "";
+      position: absolute;
+      top: -18px;
+      right: -18px;
+      width: 90px;
+      height: 90px;
+      background: radial-gradient(circle, rgba(34, 211, 238, 0.16), transparent 72%);
+      pointer-events: none;
+    }
+
+    .feature h4 {
+      font-size: 18px;
+      color: #67e8f9;
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      color: #c8d4e7;
+      font-size: 15px;
+    }
+
+    .label {
       display: inline-block;
       margin-top: 14px;
+      padding: 6px 10px;
+      border-radius: 999px;
       font-size: 12px;
       color: #fde68a;
       background: rgba(250, 204, 21, 0.08);
       border: 1px solid rgba(250, 204, 21, 0.14);
-      padding: 6px 10px;
-      border-radius: 999px;
     }
 
-    .reflection-box {
+    .highlight-box {
+      padding: 32px;
       background:
-        radial-gradient(circle at top right, rgba(37, 99, 235, 0.18), transparent 25%),
-        linear-gradient(135deg, rgba(10, 18, 34, 0.96), rgba(15, 23, 42, 0.96));
-      border: 1px solid rgba(96, 165, 250, 0.2);
+        radial-gradient(circle at top right, rgba(37, 99, 235, 0.18), transparent 24%),
+        linear-gradient(135deg, rgba(10, 18, 34, 0.98), rgba(14, 24, 44, 0.96));
+      border: 1px solid rgba(96, 165, 250, 0.16);
     }
 
-    .reflection-box p {
+    .highlight-box p {
+      color: #d9e8f8;
       font-size: 16px;
-      line-height: 1.85;
+      line-height: 1.9;
     }
 
-    .contact-card {
+    .contact-box {
+      padding: 30px;
       text-align: center;
     }
 
-    .contact-card h3 {
+    .contact-box h3 {
       font-size: 28px;
+      margin-bottom: 12px;
       color: #f8fbff;
-      margin-bottom: 14px;
+    }
+
+    .contact-box p {
+      color: #c8d4e7;
+      margin-bottom: 6px;
     }
 
     .contact-link {
@@ -442,29 +442,29 @@
 
     footer {
       text-align: center;
-      padding: 28px 0 40px;
-      color: #8fa4bf;
+      padding: 28px 0 42px;
+      color: #8da2bb;
       font-size: 14px;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 960px) {
       .hero-wrap,
+      .profile-grid,
       .grid-2,
-      .grid-3,
-      .profile-list {
+      .grid-3 {
         grid-template-columns: 1fr;
       }
 
       .hero h1 {
-        font-size: 38px;
+        font-size: 40px;
       }
 
       .menu {
         display: none;
       }
 
-      .circuit {
-        height: 220px;
+      .mini-circuit {
+        height: 210px;
       }
     }
   </style>
@@ -477,9 +477,9 @@
         <div class="logo">EE · Hoyeon Lee</div>
         <div class="menu">
           <a href="#about">Profile</a>
-          <a href="#concepts">Core Concepts</a>
-          <a href="#project">System Design</a>
-          <a href="#reflection">Reflection</a>
+          <a href="#concepts">Concepts</a>
+          <a href="#project">Design</a>
+          <a href="#growth">Insight</a>
           <a href="#contact">Contact</a>
         </div>
       </nav>
@@ -490,54 +490,55 @@
     <section class="hero">
       <div class="container hero-wrap">
         <div>
-          <div class="badge">Electrical Engineering · Communication Systems · Network</div>
+          <div class="eyebrow">Electrical Engineering · Communication Systems · Network Implementation</div>
           <h1>
-            안녕하세요,<br />
-            <span class="accent">이호연</span>의 전기공학과 개인 홈페이지입니다.
+            회로와 신호를 넘어,<br />
+            <span class="accent">통신 시스템의 흐름</span>을 직접 구현하는<br />
+            전기공학과 학생 이호연입니다.
           </h1>
           <p>
             전기공학과에 재학하며 회로, 신호, 통신 시스템에 관심을 가지고 있습니다.
-            컴퓨터네트워크 수업을 통해 데이터가 어떻게 전달되는지 학습했고,
-            웹페이지 제작과 파일 전송 구조를 직접 구현하며 이론과 시스템 동작의 연결을 경험했습니다.
+            컴퓨터네트워크 수업을 통해 HTTP, DNS, TCP/UDP, TFTP의 동작 원리를 학습했고,
+            이를 웹페이지 제작과 파일 전송 구조 구현 경험으로 연결하며
+            이론이 실제 시스템으로 확장되는 과정을 직접 체감했습니다.
           </p>
 
           <div class="button-group">
             <a href="#project" class="btn btn-primary">System Design 보기</a>
-            <a href="#contact" class="btn btn-secondary">GitHub 확인</a>
+            <a href="#growth" class="btn btn-secondary">Insight 보기</a>
           </div>
 
-          <div class="keyword-row">
-            <span class="keyword">Circuit</span>
-            <span class="keyword">Signal</span>
-            <span class="keyword">Communication</span>
-            <span class="keyword">Network</span>
-            <span class="keyword">Embedded</span>
-            <span class="keyword">System Design</span>
+          <div class="tag-row">
+            <span class="tag">Circuit</span>
+            <span class="tag">Signal</span>
+            <span class="tag">Communication</span>
+            <span class="tag">Network</span>
+            <span class="tag">Embedded</span>
+            <span class="tag">System Thinking</span>
           </div>
         </div>
 
-        <div class="hero-card">
-          <div class="circuit">
-            <div class="node n1"></div>
-            <div class="node n2"></div>
-            <div class="node n3"></div>
-            <div class="node n4"></div>
-            <div class="node n5"></div>
+        <div class="hero-panel">
+          <div class="mini-circuit">
+            <div class="dot d1"></div>
+            <div class="dot d2"></div>
+            <div class="dot d3"></div>
+            <div class="dot d4"></div>
+            <div class="dot d5"></div>
 
-            <div class="line l1"></div>
-            <div class="line l2"></div>
-            <div class="line l3"></div>
-            <div class="line l4"></div>
+            <div class="wire w1"></div>
+            <div class="wire w2"></div>
+            <div class="wire w3"></div>
+            <div class="wire w4"></div>
 
-            <div class="pulse p1"></div>
+            <div class="pulse"></div>
           </div>
 
-          <div class="system-box">
-            <h3>Engineering Keywords</h3>
+          <div class="panel-caption">
+            <h3>Engineering Perspective</h3>
             <p>
-              회로와 신호를 바탕으로 통신 시스템을 이해하고,
-              HTTP, TCP/UDP, DNS, TFTP 같은 네트워크 개념을
-              실제 구현과 연결해 학습하고 있습니다.
+              전기공학에서 다루는 신호와 통신의 개념을 바탕으로,
+              네트워크 프로토콜과 웹 서비스 구조를 실제 동작 흐름의 관점에서 이해하고 있습니다.
             </p>
           </div>
         </div>
@@ -547,32 +548,33 @@
     <section id="about">
       <div class="container">
         <h2 class="section-title">Profile</h2>
-        <p class="section-desc">전기공학과 학생으로서의 관심 분야와 기본 정보를 정리했습니다.</p>
+        <p class="section-desc">전공 배경과 관심 분야를 바탕으로 저를 소개합니다.</p>
 
-        <div class="intro-card">
+        <div class="intro-box">
           <p>
-            저는 전기공학과 학생으로서 회로 이론과 신호, 통신 시스템에 흥미를 가지고 있습니다.
-            이번 과제를 통해 단순히 네트워크 개념을 배우는 데서 끝나지 않고,
-            HTML 기반의 웹페이지를 직접 작성하고 GitHub Pages로 배포하면서
-            하나의 시스템이 사용자에게 어떤 형태로 제공되는지 경험할 수 있었습니다.
+            저는 전기공학과 학생으로서 회로와 신호, 통신 시스템에 대한 관심을 바탕으로
+            하드웨어와 소프트웨어가 연결되는 지점을 꾸준히 탐구하고 있습니다.
+            이번 과제에서는 단순히 웹페이지를 만드는 데 그치지 않고,
+            네트워크 개념이 실제 사용자 화면과 시스템 동작으로 이어지는 과정을 직접 구현해보며
+            공학적 사고와 설계 흐름을 함께 경험할 수 있었습니다.
           </p>
 
-          <div class="profile-list">
+          <div class="profile-grid">
             <div class="profile-item">
               <strong>이름</strong>
-              이호연
+              <span>이호연</span>
             </div>
             <div class="profile-item">
               <strong>학과</strong>
-              전기공학과
+              <span>전기공학과</span>
             </div>
             <div class="profile-item">
               <strong>학번</strong>
-              2022111462
+              <span>2022111462</span>
             </div>
             <div class="profile-item">
               <strong>GitHub</strong>
-              Ash0216
+              <span>Ash0216</span>
             </div>
           </div>
 
@@ -581,6 +583,7 @@
             <span class="chip">신호 처리</span>
             <span class="chip">임베디드 시스템</span>
             <span class="chip">네트워크 구현</span>
+            <span class="chip">시스템 설계</span>
           </div>
         </div>
       </div>
@@ -589,39 +592,38 @@
     <section id="concepts">
       <div class="container">
         <h2 class="section-title">Core Concepts</h2>
-        <p class="section-desc">수업에서 학습한 네트워크 개념을 전기공학적 관점과 함께 정리했습니다.</p>
+        <p class="section-desc">수업에서 학습한 주요 개념을 전기공학적 시각과 함께 정리했습니다.</p>
 
         <div class="grid-2">
           <div class="card">
-            <h3>HTTP와 웹 통신</h3>
+            <h3>HTTP와 웹 서비스 구조</h3>
             <p>
-              브라우저와 서버가 요청과 응답을 주고받는 구조를 학습했습니다.
-              사용자가 화면에서 보는 결과가 실제로는 통신 절차를 통해 전달된다는 점을 이해할 수 있었습니다.
+              브라우저와 서버가 요청과 응답을 주고받는 구조를 이해하면서,
+              사용자가 화면에서 보는 결과가 실제로는 여러 통신 절차 위에서 구성된다는 점을 배울 수 있었습니다.
             </p>
           </div>
 
           <div class="card">
-            <h3>TCP와 UDP</h3>
+            <h3>TCP와 UDP의 전송 특성</h3>
             <p>
-              TCP는 신뢰성을 보장하는 통신 방식이고, UDP는 구조가 단순하고 빠르다는 특징이 있습니다.
-              전송 방식의 차이를 비교하면서 시스템 설계에서의 선택 기준을 생각해볼 수 있었습니다.
+              TCP는 신뢰성과 순서를 보장하는 방식이고, UDP는 구조가 단순하고 빠르다는 특성을 가집니다.
+              각 프로토콜의 차이를 비교하면서 상황에 따라 적절한 전송 방식이 달라진다는 점을 이해했습니다.
             </p>
           </div>
 
           <div class="card">
-            <h3>DNS와 주소 체계</h3>
+            <h3>DNS와 인터넷 주소 체계</h3>
             <p>
-              사람이 읽기 쉬운 도메인 이름이 실제 IP 주소와 연결되는 구조를 이해했습니다.
-              이를 통해 인터넷에서 서비스가 식별되고 접근되는 과정을 배울 수 있었습니다.
+              사람이 읽기 쉬운 도메인 이름이 실제 IP 주소와 연결되는 과정을 학습하며,
+              인터넷에서 서비스가 어떻게 식별되고 접근되는지 구조적으로 이해할 수 있었습니다.
             </p>
           </div>
 
           <div class="card">
-            <h3>통신 시스템 관점</h3>
+            <h3>통신 이론과 시스템 구현의 연결</h3>
             <p>
-              이번 학습은 단순한 웹페이지 제작을 넘어서,
-              데이터가 송신되고 수신되는 절차와 프로토콜 흐름을 이해하는 과정이기도 했습니다.
-              전기공학에서 배우는 통신 시스템 개념과 연결해서 볼 수 있었습니다.
+              이번 과제를 통해 네트워크 이론은 단순한 개념 암기가 아니라,
+              실제 시스템 설계와 동작 절차를 이해하기 위한 기반이라는 점을 체감할 수 있었습니다.
             </p>
           </div>
         </div>
@@ -631,53 +633,55 @@
     <section id="project">
       <div class="container">
         <h2 class="section-title">System Design</h2>
-        <p class="section-desc">TFTP 기반 파일 전송 프로젝트를 시스템 설계 관점에서 요약했습니다.</p>
+        <p class="section-desc">TFTP 기반 파일 전송 프로젝트를 설계와 구현의 관점에서 정리했습니다.</p>
 
         <div class="grid-3">
-          <div class="feature-card">
+          <div class="feature">
             <h4>프로젝트 목표</h4>
             <p>
-              브라우저 기반 인터페이스와 UDP 기반 파일 전송 구조를 연결하여,
-              사용자가 업로드와 다운로드를 수행할 수 있는 흐름을 이해하는 것이 목표였습니다.
+              브라우저 기반 사용자 인터페이스와 UDP 기반 파일 전송 구조를 연결하여,
+              파일 업로드와 다운로드가 어떤 통신 흐름 위에서 수행되는지 이해하는 것을 목표로 했습니다.
             </p>
-            <span class="mini-tag">Goal</span>
+            <span class="label">Goal</span>
           </div>
 
-          <div class="feature-card">
-            <h4>동작 구조</h4>
+          <div class="feature">
+            <h4>동작 흐름 분석</h4>
             <p>
-              사용자는 웹페이지에서 요청을 보내고,
-              내부적으로는 RRQ, WRQ, DATA, ACK와 같은 TFTP 패킷 흐름이 동작하는 구조를 정리했습니다.
+              사용자의 요청이 웹페이지에서 시작되어 내부적으로는 RRQ, WRQ, DATA, ACK와 같은
+              TFTP 패킷 교환으로 이어지는 구조를 정리하며 전체 시스템 흐름을 파악했습니다.
             </p>
-            <span class="mini-tag">Flow</span>
+            <span class="label">Flow</span>
           </div>
 
-          <div class="feature-card">
-            <h4>구현 의의</h4>
+          <div class="feature">
+            <h4>구현의 의미</h4>
             <p>
-              HTTP와 UDP 기반 통신이 어떤 역할을 하는지 구분해서 볼 수 있었고,
-              통신 프로토콜이 실제 시스템 구현으로 이어지는 과정을 경험할 수 있었습니다.
+              이번 구현을 통해 HTTP와 UDP 기반 통신의 역할 차이를 구분해볼 수 있었고,
+              프로토콜이 실제 동작하는 시스템 안에서 어떤 방식으로 사용되는지 더 명확하게 이해할 수 있었습니다.
             </p>
-            <span class="mini-tag">Meaning</span>
+            <span class="label">Meaning</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="reflection">
+    <section id="growth">
       <div class="container">
-        <h2 class="section-title">Reflection</h2>
-        <p class="section-desc">과제를 수행하며 느낀 점을 정리했습니다.</p>
+        <h2 class="section-title">Insight & Reflection</h2>
+        <p class="section-desc">이번 과제를 통해 얻은 배움과 인상을 정리했습니다.</p>
 
-        <div class="reflection-box">
+        <div class="highlight-box">
           <p>
-            처음에는 홈페이지 제작과 배포가 낯설게 느껴졌지만,
-            직접 HTML 파일을 수정하고 GitHub Pages로 연결해 보면서
-            하나의 결과물이 실제 웹 서비스 형태로 공개되는 과정을 이해할 수 있었습니다.
-            또한 파일 전송 프로젝트를 통해 통신 이론이 단순한 개념 설명이 아니라,
-            구체적인 프로토콜과 동작 절차로 구현된다는 점이 인상 깊었습니다.
-            이번 과제를 통해 전기공학에서 배우는 통신 시스템 개념과
-            컴퓨터네트워크의 실제 구현 사이의 연결을 경험할 수 있었습니다.
+            이번 과제는 단순히 결과물을 제출하는 작업이라기보다,
+            전기공학에서 배우는 통신 개념이 실제 시스템 구현과 어떻게 맞닿아 있는지 확인하는 과정에 가까웠습니다.
+            처음에는 HTML 작성과 GitHub Pages 배포가 낯설고 다소 막막하게 느껴졌지만,
+            파일 하나가 브라우저에서 동작하는 웹페이지가 되고,
+            그 결과가 다시 인터넷을 통해 하나의 서비스처럼 공개되는 경험은 매우 인상적이었습니다.
+            또한 TFTP 기반 파일 전송 구조를 정리하면서
+            데이터의 이동이 단순한 파일 복사가 아니라 프로토콜, 패킷 흐름, 응답 절차로 구성된 정교한 과정임을 이해할 수 있었습니다.
+            이번 경험을 통해 저는 이론을 배우는 것에 머무르지 않고,
+            실제 동작 원리를 구조적으로 바라보는 시각과 시스템 단위로 사고하는 태도의 중요성을 더 분명하게 느끼게 되었습니다.
           </p>
         </div>
       </div>
@@ -685,7 +689,7 @@
 
     <section id="contact">
       <div class="container">
-        <div class="contact-card">
+        <div class="contact-box">
           <h3>Contact & Repository</h3>
           <p>이름: 이호연</p>
           <p>학과: 전기공학과</p>
@@ -698,7 +702,7 @@
   </main>
 
   <footer>
-    © 2026 이호연 · Electrical Engineering Personal Homepage
+    © 2026 Hoyeon Lee · Electrical Engineering Portfolio
   </footer>
 
 </body>
